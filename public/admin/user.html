@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>后台用户管理</title>
+    <!-- 1. 引入字体图标 -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+    <!-- 2. 引入bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 3. 自己的less -->
+    <link rel="stylesheet/less" href="less/index.less">
+    <!-- 4. less编译器 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <main id="main">
+        <div class="left">
+            <div class="logo">
+                <img src="images/1.png" alt="">
+                <p>小姐姐</p>
+            </div>
+            <div class="list-group">
+                <a href="user.html" class="list-group-item active">
+                    用户管理
+                </a>
+                <!-- 折叠菜单的属性 href="#collapseExample" data-toggle="collapse" -->
+                <a href="#collapseExample" data-toggle="collapse" class="list-group-item ">分类管理</a>
+                <div class="collapse" id="collapseExample">
+                    <div class="list-group">
+                        <a href="categoryFirst.html" class="list-group-item ">
+                            一级分类
+                        </a>
+                        <a href="categorySecond.html" class="list-group-item ">
+                            二级分类
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="list-group-item">商品管理</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="title">
+                <a href="#" class="fa fa-navicon"></a>
+                <a href="#" class="fa fa-sign-out">退出</a>
+            </div>
+            <div class="content">
+                <table class="table table-bordered table-striped table-hover message">
+                    <thead>
+                        <tr class="success">
+                            <th>#</th>
+                            <th>用户名</th>
+                            <th>电话</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>itcast</td>
+                            <td>15102324243 </td>
+                            <td>已启用</td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-option">禁用</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 分页组件 -->
+                <nav>
+                    <ul class="pagination">
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+    <script id="userTpl" type="text/html">
+        {{each rows value}}
+        <tr>
+            <!-- isDelete: 1   isDelete == 0 表示 已禁用 isDelete == 1 表示 已启用 -->
+            <th scope="row">{{value.id}}</th>
+            <td>{{value.username}}</td>
+            <td>{{value.mobile}} </td>
+            {{if value.isDelete == 0}}
+            <td>已禁用</td>
+            <td>
+                <button type="button" class="btn btn-success btn-option" data-is-delete="{{value.isDelete}}" data-id="{{value.id}}">启用</button>
+            </td>
+            {{else}}
+            <td>已启用</td>
+            <td>
+                <button type="button" class="btn btn-danger btn-option" data-is-delete="{{value.isDelete}}" data-id="{{value.id}}">禁用</button>
+            </td>
+            {{/if}}
+        </tr>
+        {{/each}}
+    </script>
+    <!-- 1. 引入jquery  -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- <script src="../m/lib/zepto/zepto.min.js"></script> -->
+    <!-- 2. 引入bootstrap.js -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 3. 引入模板引擎  -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 4. 引入bootstrap的分页插件 -->
+    <script src="lib/bootstrap/js/bootstrap-paginator.js"></script>
+    <!-- 5. 自己的JS -->
+    <script src="js/user.js"></script>
+</body>
+
+</html>

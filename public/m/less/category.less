@@ -1,0 +1,76 @@
+@import 'base.less';
+
+body{
+	background-color: #ccc;
+}
+/* 分类页面的主体样式 */
+#main{
+	display: flex;
+	.category-left{
+		width: 0.8rem;
+		position: relative;
+		ul{
+			/* 如果高度不够也需要加滑动 加一个最小高 高度不够就生效最小高 高度超出就生效高度 */
+			min-height: 5.78rem;
+			li{
+				a{
+					display: block;
+					color:#666;
+					height: 0.45rem;
+					text-align: center;
+					line-height: 0.45rem;
+					font-size: 0.14rem;
+					background-color: #fff;
+					border-bottom: 1px solid #ccc;
+				}
+				&.active{
+					a{
+						background-color: #ccc;
+						color:@main-color;
+					}
+				}
+			}
+		}
+	}
+	.category-right{
+		flex:1;
+		/* 子元素绝对定位的 padding不会影响子元素的位置 */
+		/* padding: 10px; */
+		position: relative;
+		ul{
+			display:flex;
+			flex-wrap:wrap;
+			padding: 10px;
+			min-height: 5.78rem;
+			/* 注意如果设置了最小高度 默认内容会使用 align-content:stretch 内容会占满整个高度
+			把内容对齐方式设置为flex-start顶部对齐 */
+			align-content:flex-start;
+			li{
+				width: 33.33%;
+				a{
+					display: block;
+					background-color: #fff;
+					img{
+						width: 0.92rem;
+						height:0.5rem;
+					}
+					p{
+						font-size: 0.14rem;
+						text-align: center;
+						/* 限制只显示2行文字超出隐藏 */
+                    /* 改成弹性伸缩盒子模型 */
+                    display: -webkit-box;
+                    /* 伸缩盒子方向 垂直方向 */
+                    -webkit-box-orient: vertical;
+                    /* 设置文字显示的行数 */
+                    -webkit-line-clamp: 1;
+                    /* 超出部分隐藏 */
+                    overflow: hidden;
+                    /* 文本超出后显示... */
+                    text-overflow: ellipsis;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,87 @@
+@import 'base.less';
+body {
+    /* 由于购物车底部多加了一个订单 固定定位 中间main再减少订单高度 30px */
+    padding-bottom: 0.75rem;
+}
+
+
+/* 中间主体样式 */
+
+#main {
+    .mui-media {
+        .mui-pull-left {
+            &.mui-checkbox {
+                .mui-media-object {
+                    line-height: 0.8rem;
+                    height: 0.8rem;
+                    max-width: 0.8rem;
+                }
+                input {
+                    /* 取消定位 */
+                    position: static;
+                    display: block;
+                    margin: 0 auto;
+                    &::before {
+                        color: hotpink;
+                    }
+                }
+            }
+        }
+        .mui-media-body {
+            line-height: 0.36rem;
+            .product-name {
+                /* MUI默认设置强制不换行的属性 去掉强制不换行属性 */
+                white-space: normal;
+                color: #666;
+                line-height: 0.2rem;
+            }
+            .product-price {
+                span {
+                    color: red;
+                    font-weight: 600;
+                }
+                del {
+                    color: #ccc;
+                }
+            }
+            .product-params {
+                display: flex;
+                /* 两端对齐 */
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+
+/* 订单区域样式 */
+
+#order {
+    position: fixed;
+    background-color: #fff;
+    bottom: 0.45rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+    height: 0.3rem;
+    .order-total {
+        padding-left: 0.1rem;
+        line-height: 0.3rem;
+        font-weight: 600;
+        color: red;
+    }
+}
+.mui-popup{
+    width: 3.2rem;
+}
+/* 确认框动态弹出来在页面最上面的不是谁的子元素 */
+.product-size {
+    line-height: 0.38rem;
+    .btn-size {
+        margin-top: 0.05rem;
+        &.active {
+            background-color: orange;
+        }
+    }
+}

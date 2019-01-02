@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>后台主页</title>
+    <!-- 1. 引入字体图标 -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+    <!-- 2. 引入bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 3. 自己的less -->
+    <link rel="stylesheet/less" href="less/index.less">
+    <!-- 4. less编译器 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <main id="main">
+        <div class="left">
+            <div class="logo">
+                <img src="images/1.png" alt="">
+                <p>小姐姐</p>
+            </div>
+            <div class="list-group">
+                <a href="user.html" class="list-group-item active">
+                    用户管理
+                </a>
+                <!-- 折叠菜单的属性 href="#collapseExample" data-toggle="collapse" -->
+                <a href="#collapseExample" data-toggle="collapse" class="list-group-item ">分类管理</a>
+                <div class="collapse" id="collapseExample">
+                    <div class="list-group">
+                        <a href="categoryFirst.html" class="list-group-item ">
+                            一级分类
+                        </a>
+                        <a href="categorySecond.html" class="list-group-item ">
+                            二级分类
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="list-group-item">商品管理</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="title">
+                <a href="#" class="fa fa-navicon"></a>
+                <a href="#" class="fa fa-sign-out">退出</a>
+            </div>
+            <div class="content">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr class="success">
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 分页组件 -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+    <!-- 1. 引入jquery  -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- 2. 引入bootstrap.js -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 3. 引入模板引擎  -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 4. 自己的JS -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

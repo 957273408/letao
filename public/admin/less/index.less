@@ -1,0 +1,69 @@
+#main {
+    display: flex;
+    height: 100vh;
+    .left {
+        width: 200px;
+        background-color: skyblue;
+        height: 100%;
+        .logo {
+            text-align: center;
+            padding: 30px 0;
+            img {
+                width: 140px;
+                border-radius: 50%;
+                border: 10px solid #fff;
+                box-shadow: 0px 0px 2px hotpink;
+            }
+            p {
+                margin-top: 10px;
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+        .list-group {
+            .list-group-item {
+                &.active {
+                    background-color: hotpink;
+                    color: #fff;
+                    border-color: hotpink;
+                }
+                &:hover {
+                    background-color: hotpink;
+                    color: #fff;
+                    border-color: hotpink;
+                }
+            }
+            .list-group {
+                padding-left: 20px;
+            }
+        }
+    }
+    .right {
+        flex: 1;
+        .title {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            a {
+                width: 40px;
+                height: 40px;
+                text-decoration: none;
+                &:first-child {
+                    background-color: yellowgreen;
+                    color: #fff;
+                    font-size: 25px;
+                    text-align: center;
+                    line-height: 40px;
+                }
+                &:last-child {
+                	width: 80px;
+                    background-color: yellowgreen;
+                    color: #fff;
+                    font-size: 20px;
+                    text-align: center;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}

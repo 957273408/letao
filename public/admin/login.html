@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>后台登录页面</title>
+    <!-- 1. 引入字体图标 -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+    <!-- 2. 引入bootstrap -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 3. 自己的less -->
+    <link rel="stylesheet/less" href="less/login.less">
+
+    <!-- 4. less编译器 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <div class="login-form">
+        <div class="logo">
+            <img src="images/25.png" alt="">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon1">用户名</span>
+            <input type="text" class="form-control username" value="root" placeholder="用户名" aria-describedby="sizing-addon1">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2">密码</span>
+            <input type="password" class="form-control password" value="123456" placeholder="密码" aria-describedby="sizing-addon2">
+        </div>
+        <div class="input-group input-group-sm">
+            <button type="button" class="btn btn-paimary btn-login">登录</button>
+        </div>
+    </div>
+    <!-- 1. 引入jquery  -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- 2. 引入bootstrap.js -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 3. 引入模板引擎  -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 4. 自己的JS -->
+    <script src="js/login.js"></script>
+</body>
+
+</html>

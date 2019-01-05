@@ -1,22 +1,48 @@
-@import 'base.less';
-/* 中间的主体区域样式 */
-#main{
-	background-color: #fff;
+@import './base.less';
 
-	/* 搜索历史的样式 */
-	.search-history{
-		.mui-card-header{
-			span{
-				font-size: 0.14rem;
-			}
-			a{
-				color:#666;
-			}
-		}
-		.mui-card-content{
-			.fa-times{
-				line-height: 0.17rem;
-			}
-		}
-	}
+#lt-header{
+    a{
+        left: 0;
+    }
+}
+#main{
+    padding: 0.45rem 0;
+    height: 100%;
+    background: #fff;
+    .search-title{
+        form{
+            display: flex;
+            padding: 0.1rem;
+            input{
+                flex: 1;
+                margin: 0;
+                border: 1px solid #006699;
+                background: #fff;
+                text-align: left;
+                border-radius: 0.06rem 0 0 0.06rem;
+                font-size: .14rem;
+            }
+            button{
+                width: .6rem;
+                background: #006699;
+                border: 1px solid #006699;
+                color: #fff;
+                border-radius: 0 .06rem .06rem 0;
+            }
+        }
+    }
+    .mui-card-header{
+        p{
+            margin: 0;
+            font-size: .14rem;
+            color: #000;
+        }
+        a{
+            font-size: .14rem;
+            color: #666;
+            &:active{
+                color: skyblue;
+            }
+        }
+    }
 }

@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>乐淘</title>
-    <link rel="stylesheet" href="./lib/">
+    <title>员工登录</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./css/login.less">
+    <script src="./lib/jquery/jquery.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/less/less.js"></script>
 </head>
+
 <body>
-    自写乐淘登录页面
+    <div id="login">
+        <form action="#">
+            <div class="form-group">
+                <label for="exampleInputName1" class="col-xs-2">用户名</label>
+                <div class="col-xs-10">
+                    <input type="text" class="form-control usename" id="exampleInputName1" placeholder="请输入用户名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputName2" class="col-xs-2">密码</label>
+                <div class="col-xs-10">
+                    <input type="password" class="form-control usepow " id="exampleInputName2" placeholder="请输入密码">
+                </div>
+            </div>
+            <button type="button" class="btn btn-danger ">登录</button>
+            <img src="./images/1.png" class="img-circle" alt="">
+        </form>
+    </div>
 </body>
+<script src='./js/login.js'></script>
 </html>

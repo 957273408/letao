@@ -26,6 +26,7 @@ Lee.prototype={
             }
             this.localData.unshift(search.trim())
             this.setlocal()
+            location='productlist.html?search='+$('.search-text').val()
         }.bind(this)) 
         return this
     },
@@ -37,7 +38,7 @@ Lee.prototype={
     },
     clearhistory:function(){
         $('.mui-card-header').on('tap','a',()=>{
-            localStorage.clear();
+            localStorage.removeItem(this.key);
             this.queryHistory()
         })
         return this
@@ -47,7 +48,7 @@ Lee.prototype={
         $('.mui-table-view').on('tap','.mui-badge',function(){
             console.log(1)
             that.getlocal();
-            that.localData.splice($(this).data('index'));
+            that.localData.splice($(this).data('index'),1);
             that.setlocal()
             that.queryHistory()
         })
